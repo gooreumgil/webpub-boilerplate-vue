@@ -1,0 +1,114 @@
+/* global */
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+
+/* body */
+body {
+  padding-top: 36px; /* header height */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body.open-modal {
+  overflow: hidden;
+}
+
+/* header */
+header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow .3s;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+header.scrolled {
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, .25);
+  border-bottom: 1px solid transparent;
+}
+
+header .logo {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header .hamburger {
+  display: none;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  cursor: pointer;
+}
+
+header ul {
+  float: right;
+  display: table;
+}
+
+header ul li {
+  display: table-cell;
+  padding: 10px;
+}
+
+/* sidemenu */
+.sidemenu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, .25);
+  z-index: 3;
+  left: -100%;
+  top: 0;
+  transition: left .3s;
+  
+}
+
+.sidemenu.active {
+  left: 0;
+}
+
+.sidemenu .sidemenu__inner {
+  width: calc(100% - 40px);
+  max-width: 360px;
+  height: 100%;
+  background-color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.sidemenu .sidemenu__inner ul li {
+  padding: 10px 0;
+}
+
+/* modal */
+.modal {
+  width: 0;
+  height: 0;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s;
+  background-color: rgba(0, 0, 0, .25);
+  overflow: hidden;
+}
+
+.modal.active {
+  width: 100%;
+  height: 100%;
+}
+
+/* logo */
+.logo {
+  width: 30px;
+}
+
+.hamburger {
+  width: 20px;
+  height: 20px;
+}
